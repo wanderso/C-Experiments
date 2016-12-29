@@ -9,17 +9,15 @@ int main()
    long elapsed_seconds;
    char line[80];
 
-   fr = fopen ("elapsed.dta", "r");  /* open the file for reading */
-   /* elapsed.dta is the name of the file */
-   /* "rt" means open the file for reading text */
+   fr = fopen ("events.dta", "r");
 
    while(fgets(line, 80, fr) != NULL)
    {
 	 sscanf (line, "%ld", &elapsed_seconds);
 	 printf ("%ld\n", elapsed_seconds);
    }
-   fclose(fr);  /* close the file prior to exiting the routine */
+   
+   fclose(fr);
    return 0;
-
 }
 
